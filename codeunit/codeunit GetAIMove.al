@@ -142,21 +142,21 @@ codeunit 50141 GetAIMove
 
     local procedure FindForkBlock(color: Text): Integer
     var
-        oponent: Integer;
+        opponent: Integer;
 
     begin
         if color = 'x' then
-            oponent := 5
+            opponent := 5
         else
-            oponent := 3;
+            opponent := 3;
 
-        if (Game[2] = oponent) and (Game[6] = oponent) then
+        if (Game[2] = opponent) and (Game[6] = opponent) then
             exit(3);
-        if (Game[6] = oponent) and (Game[8] = oponent) then
+        if (Game[6] = opponent) and (Game[8] = opponent) then
             exit(9);
-        if (Game[8] = oponent) and (Game[4] = oponent) then
+        if (Game[8] = opponent) and (Game[4] = opponent) then
             exit(7);
-        if (Game[4] = oponent) and (Game[2] = oponent) then
+        if (Game[4] = opponent) and (Game[2] = opponent) then
             exit(1);
     end;
 
